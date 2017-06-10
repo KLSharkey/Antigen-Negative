@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Antigen Negative Units</title>
+        <style>
+            label {
+                font-size: 35px;
+                
+            }
+            input[type=checkbox] {
+                transform: scale(2);
+            }
+            table {
+                width: 90%;
+            }
+            .header_form {
+                text-align: center;
+            }
+            #units_to_transfuse {
+                height: 50px;
+                width: 175px;
+                font-size: 40px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <form action="/calculated" method="post">
+        <div class="header_form">
+        <label for="units_to_transfuse">
+            Number of Units Needed to Transfuse:<br>
+        </div>
+            <input type="number" name="units_to_transfuse" id="units_to_transfuse" style="align:center"/>
+        </label>
+        <br>
+        <label for="antigen"> Antigens (choose at least one):<br>
+        <table>
+            <tr>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.32"> C
+                </td>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.20"> c
+                </td>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.71"> E
+                </td>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.02"> e
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.34"> Fy<sup> a</sup>
+                </td>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.17"> Fy<sup>b</sup>
+                </td>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.23"> Jk<sup>a</sup>
+                </td>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.26"> Jk<sup>b</sup>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.78"> Le<sup>a</sup>
+                </td>
+                <td>  
+                    <input type="checkbox" name="antigen" value="0.28"> Le<sup>b</sup>
+                 </td>
+                <td>   
+                    <input type="checkbox" name="antigen" value="0.22"> M
+                 </td>
+                <td>   
+                    <input type="checkbox" name="antigen" value="0.280"> N
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.45"> S
+                </td>
+                <td>
+                    <input type="checkbox" name="antigen" value="0.11"> s
+                 </td>
+                <td>   
+                    <input type="checkbox" name="antigen" value="0.91"> K
+                </td>
+            </tr>
+        </table>
+        </label>
+        <input type="submit" value="Calculate"/>
+        
+    </form>
+    </body>
+</html>
