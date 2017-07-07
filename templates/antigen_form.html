@@ -2,40 +2,24 @@
 <html>
     <head>
         <title>Antigen Negative Units</title>
-        <style>
-            label {
-                font-size: 35px;
-                
-            }
-            input[type=checkbox] {
-                transform: scale(2);
-            }
-            table {
-                width: 90%;
-            }
-            .header_form {
-                text-align: center;
-            }
-            #units_to_transfuse {
-                height: 50px;
-                width: 175px;
-                font-size: 40px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-        </style>
+      <link rel='stylesheet' type="text/css" href='../static/style.css'/>
+      
     </head>
     <body>
+    
         <form action="/calculated" method="post">
         <div class="header_form">
         <label for="units_to_transfuse">
-            Number of Units Needed to Transfuse:<br>
+            Number of Units Needed to Transfuse:<br><br>
         </div>
-            <input type="number" name="units_to_transfuse" id="units_to_transfuse" style="align:center"/>
+        <div id='transfuse'>
+            <input type="number" name="units_to_transfuse" id="units_to_transfuse">
+        </div>
         </label>
         <br>
-        <label for="antigen"> Antigens (choose at least one):<br>
+        
+        <label for="antigen"><p id='antigens-lab'>Antigens (choose at least one):</p><br> 
+      
         <table>
             <tr>
                 <td>
@@ -91,8 +75,9 @@
                 </td>
             </tr>
         </table>
-        </label>
-        <input type="submit" value="Calculate"/>
+       </label>
+       
+        <br><input type="submit" value="Calculate" id='calc-button'/>
         
     </form>
     </body>

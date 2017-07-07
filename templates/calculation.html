@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='style.css') }}" />-->
+        <link rel='stylesheet' type="text/css" href='../static/style.css'/>
+    </head>
+    <body>
+        <div id='all-calculation'>
+        <a href='/' id='link_home'>Another Calculation</a>
+        <div id='calculation-head'>
+        <h1 class='head-calc'>Antigen Negative Units </h1>
+        <h2>Number of units total:</h2>
+            <p id= 'answer'>{{answer}}</bold></p>
+        <h3>Units (to the hundreth place):</h3>
+            <p>{{calculation}}</p>
+        <h3>You chose: </h3>
+            <p>{{key_list}}</p>
+        </div>
+        </div>
+    </body>
+</html>
